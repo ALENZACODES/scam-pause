@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; form-action 'none'; base-uri 'none'">
+<meta name="author" content="John Khan">
+<title>Scam Pause: check it before you send money</title>
+<meta name="description" content="Paste a text or describe a call. Scam Pause shows each warning sign in plain words with its source, starts a ten minute pause, and helps you ask someone you trust. It runs on your device and sends nothing.">
+<meta property="og:title" content="Scam Pause">
+<meta property="og:description" content="Check it before you send money. Warning signs explained, a ten minute pause, and a message to someone you trust. Nothing leaves your device.">
+<meta property="og:image" content="https://alenzacodes.github.io/scam-pause/docs/social-preview.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23011f5b'/%3E%3Crect x='10' y='9' width='4' height='14' rx='1.5' fill='%23fff'/%3E%3Crect x='18' y='9' width='4' height='14' rx='1.5' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="src/theme/waves.css">
+<link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to the check</a>
+<header class="w-wave">
+ <div class="wrap">
+  <h1>Scam Pause</h1>
+  <p class="lead">Someone wants money, a code or your card, and they want it now. Before you do anything, check it here. Scam Pause shows each warning sign in plain words, then gives you ten minutes and someone to ask.</p>
+  <p class="lock"><span aria-hidden="true">🔒</span> Private. It runs on your device, keeps nothing you paste, and a security policy stops the page from sending anything anywhere.</p>
+ </div>
+</header>
+<main class="wrap" id="main">
+  <p class="danger" role="note"><strong>In danger right now?</strong> Call 911. Scam Pause is not an emergency service.</p>
+
+  <section class="card" aria-labelledby="checkH">
+    <h2 id="checkH">What happened?</h2>
+    <div class="tabs" role="tablist">
+      <button role="tab" id="tabMsg" aria-selected="true" type="button">💬 A text or email</button>
+      <button role="tab" id="tabCall" aria-selected="false" type="button">📞 A phone call</button>
+    </div>
+    <div id="msgPane">
+      <label for="msg" class="note">Paste it, or type what it says.</label>
+      <textarea id="msg" rows="5" spellcheck="false" placeholder="For example: CRA FINAL NOTICE. You owe $2,431. Pay immediately with gift cards..."></textarea>
+      <p class="note">Or try an example (all made up): <span id="samples"></span></p>
+    </div>
+    <div id="callPane" hidden>
+      <div id="callQs" class="callqs"></div>
+    </div>
+    <button class="btn big" id="checkBtn" type="button">Check it</button>
+  </section>
+
+  <section id="result" class="result" hidden aria-live="polite">
+    <div id="banner" class="banner"></div>
+    <div id="story" class="story" hidden></div>
+    <div class="actions">
+      <button class="btn" id="pauseBtn" type="button">⏸ Start a 10 minute pause</button>
+      <button class="btn alt" id="askBtn" type="button">👋 Ask someone I trust</button>
+      <button class="btn alt" id="sentBtn" type="button">I already sent money</button>
+    </div>
+    <div class="grid2">
+      <div><h3>The warning signs</h3><ul id="signs" class="signs"></ul></div>
+      <div><h3>Where it found them</h3><div id="marked" class="marked"></div><div id="linksBox"></div></div>
+    </div>
+  </section>
+
+  <section id="pause" class="card pausecard" hidden aria-labelledby="pauseH">
+    <h2 id="pauseH">Take ten minutes</h2>
+    <p class="note">Real problems can wait ten minutes. Scams can't, which is why they rush you. The Canadian Anti-Fraud Centre suggests hanging up and waiting ten minutes, or using another phone, before calling your bank back.</p>
+    <div class="timerrow">
+      <div class="timer" id="timer" role="timer" aria-live="off">10:00</div>
+      <div><button class="btn small alt" id="stopPause" type="button">End the pause early</button></div>
+    </div>
+    <ol id="checklist" class="checklist"></ol>
+    <p id="pauseDone" class="done" hidden></p>
+  </section>
+
+  <section id="ask" class="card" hidden aria-labelledby="askH">
+    <h2 id="askH">Ask someone you trust</h2>
+    <p class="note">A second person breaks the spell. This message leaves out links, codes and card numbers, so it is safe to forward. Their name and number are saved only on this device.</p>
+    <div class="row2">
+      <div><label for="tName">Their name</label><input id="tName" autocomplete="off" placeholder="Priya"></div>
+      <div><label for="tPhone">Their phone number</label><input id="tPhone" type="tel" autocomplete="off" placeholder="416 555 0100"></div>
+    </div>
+    <label for="tMsg">The message (you can edit it)</label>
+    <textarea id="tMsg" rows="7"></textarea>
+    <div class="actions">
+      <button class="btn" id="copyMsg" type="button">Copy the message</button>
+      <a class="btn alt" id="smsLink" href="#">💬 Text it</a>
+      <a class="btn alt" id="callLink" href="#">📞 Call them</a>
+    </div>
+  </section>
+
+  <section id="sent" class="card sentcard" hidden aria-labelledby="sentH">
+    <h2 id="sentH">If you already sent money or a code</h2>
+    <p>Act now. Minutes matter, and it is not your fault. Scammers are professionals.</p>
+    <ol class="steps">
+      <li><strong>Call your bank</strong> using the number on the back of your card. Tell them it was fraud and ask them to stop or recall the payment. If you shared a code or password, ask them to lock your accounts.</li>
+      <li><strong>Gift cards:</strong> call the number on the back of the card right away. Keep the cards and receipts.</li>
+      <li><strong>Crypto:</strong> contact the exchange or ATM operator. It is hard to reverse, so report it quickly.</li>
+      <li><strong>Gave remote access?</strong> Disconnect from the internet and have the device checked. Change your passwords from another device.</li>
+      <li><strong>Report it</strong> to your local police and to the Canadian Anti-Fraud Centre at 1-888-495-8501.</li>
+      <li><strong>Watch for a second scam:</strong> anyone who offers to recover the money for a fee is a scammer too.</li>
+    </ol>
+  </section>
+
+  <section class="card numbers" aria-labelledby="numH">
+    <h2 id="numH">Numbers to use instead of theirs</h2>
+    <ul id="numbers"></ul>
+    <p class="note">Never use a phone number or link that came in the message or call. Caller ID and sender names can be faked.</p>
+  </section>
+
+  <details class="about">
+    <summary>How it works, how well it does, and what it cannot do</summary>
+    <div id="about"></div>
+  </details>
+</main>
+<footer class="wrap">
+  <p>Scam Pause explains common warning signs from Canadian sources. It can't prove a message is safe or a scam. Every example in it is made up. Built in Toronto by John Khan. <a href="https://github.com/ALENZACODES/scam-pause">Source code</a>.</p>
+</footer>
+<script type="module" src="src/app.js"></script>
+</body>
+</html>

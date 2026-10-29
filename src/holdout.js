@@ -1,0 +1,28 @@
+// A second synthetic set, written after the rules were frozen and never used to tune them.
+// Its score is reported as it is, misses included.
+export const HOLDOUT = [
+  { kind: "scam", story: "bank", text: "National Bank security: we see a suspicious withdrawal. For your protection, transfer your savings into the holding account and don't call your branch, they are under investigation." },
+  { kind: "scam", story: "cra", text: "Revenue Agency notice: your tax return was flagged. Settle the amount owing now with prepaid Visa cards or police will be sent to your address." },
+  { kind: "scam", story: "emergency", text: "Grandpa it's me, please don't be mad. I got arrested and need money for bail right now. My lawyer will call you. Don't tell Dad." },
+  { kind: "scam", story: "delivery", text: "UPS: Your parcel has been held at our facility. Pay the $2.49 redelivery fee: ups-parcel-help.site" },
+  { kind: "scam", story: "job", text: "Remote job: rate hotels from your phone, 1 hour a day, earn $250 a day. Recharge your account with crypto to receive bigger tasks." },
+  { kind: "scam", story: "invest", text: "Hi dear, I'm a financial mentor. My students get 25% weekly profit on our trading app. Start with $500 in bitcoin." },
+  { kind: "scam", story: "recovery", text: "Our recovery firm specializes in getting your money back from online scams. Pay a small retainer by gift card to open your file." },
+  { kind: "scam", story: "phishing", text: "Amazon: your account is locked due to unusual activity. Verify your payment at amaz0n-ca-support.com" },
+  { kind: "scam", text: "Hello, I'm calling from Microsoft. Your computer has a virus. Let me connect with TeamViewer to fix it, it's urgent." },
+  { kind: "scam", text: "Your Hydro account is overdue and power will be disconnected in 30 minutes. Pay now at a bitcoin machine." },
+  { kind: "scam", text: "I'm selling my apartment's furniture before I move abroad. Send a $200 deposit by e-Transfer and a courier will deliver. Act fast, three people are interested." },
+  { kind: "scam", text: "Mom I lost my wallet and phone. Can you send $600 to my friend's e-Transfer? Please hurry, I'll explain later." },
+  { kind: "scam", story: "cra", text: "Service Canada: you qualify for a one-time $680 rent support payment. Apply at canada-benefits-apply.info today." },
+  { kind: "scam", text: "Officer Lee, Toronto Police. Your identity was used in a crime. To clear your name you must deposit your savings at the crypto ATM I send you to." },
+  { kind: "real", text: "Interac: Jordan sent you $120.00 for rent. Sign in to your bank to deposit it." },
+  { kind: "real", text: "Hi Grandma, thanks for the birthday card! Coming to visit next weekend with Sam." },
+  { kind: "real", text: "Canada Post: your package will be delivered tomorrow. Track it at canadapost.ca." },
+  { kind: "real", text: "RBC: You have a new message about your car loan in online banking." },
+  { kind: "real", text: "Your doctor's office: please bring your health card to your appointment on Monday." },
+  { kind: "real", text: "Netflix: your monthly payment of $16.49 went through. Enjoy watching." },
+  { kind: "real", text: "Reminder: book club meets Thursday at 7 at Lina's place." },
+  { kind: "real", text: "Enbridge: your bill is ready. Pay through your bank or at enbridgegas.com. Never share your password." },
+  { kind: "real", text: "Dad, can you call me when you're free? Need advice on the car." },
+  { kind: "real", text: "TD: Your new debit card is on its way. Activate it at any TD ATM with your PIN." },
+];

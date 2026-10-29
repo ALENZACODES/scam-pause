@@ -1,0 +1,10 @@
+{
+  "name": "scam-pause",
+  "version": "1.0.0",
+  "description": "Check it before you send money: scam warning signs explained, a ten minute pause, and a message to someone you trust.",
+  "type": "module",
+  "private": true,
+  "author": "John Khan <johnnykhan1@gmail.com>",
+  "license": "MIT",
+  "scripts": { "test": "node --test tests/*.test.js", "serve": "python3 -m http.server 8000" }
+}
