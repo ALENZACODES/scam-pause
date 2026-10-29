@@ -1,6 +1,6 @@
 # Devpost submission: Scam Pause (SafeSpace Hacks)
 
-Paste each block into the matching field. Fill [LIVE_URL], [REPO_URL] and [YOUTUBE_URL].
+Paste each block into the matching field. Fill [YOUTUBE_URL] once the video is up. The live and repo links are filled in.
 
 **Project name**
 Scam Pause
@@ -12,8 +12,8 @@ Someone wants money, a code or your card, right now. Scam Pause explains each wa
 javascript, html5, css3, node.js, playwright, github-pages
 
 **Try it out links**
-* [LIVE_URL]
-* [REPO_URL]
+* https://alenzacodes.github.io/scam-pause/
+* https://github.com/ALENZACODES/scam-pause
 
 **Video demo link**
 [YOUTUBE_URL]
@@ -96,7 +96,7 @@ The strongest signs are not technical. Being told to keep it secret, to stay on 
 * **Data**: every message, name and number in the app and the tests is made up.
 
 ## Setup steps
-1. Open [LIVE_URL], or clone [REPO_URL] and run `python3 -m http.server 8000` in the folder, then open http://localhost:8000.
+1. Open https://alenzacodes.github.io/scam-pause/, or clone https://github.com/ALENZACODES/scam-pause and run `python3 -m http.server 8000` in the folder, then open http://localhost:8000.
 2. Tap an example, or switch to "A phone call" and answer the questions. Add `?speed=40` to the address to speed up the pause for a demo.
 3. Run the tests with `node --test` (Node 20 or newer).
 
@@ -107,8 +107,8 @@ The strongest signs are not technical. Being told to keep it secret, to stay on 
 **Team**: John Khan (solo), Toronto, Ontario
 
 ## Before submitting (checklist for John)
-1. Make the repo public and turn on GitHub Pages from the main branch root. Keep it up until at least November 24 (judging runs November 23 to 24).
+1. Done October 29: the repo is public and GitHub Pages is on. Keep it up until at least November 24 (judging runs November 23 to 24).
 2. Open the live link and tap "Bank fraud call".
 3. Upload docs/demo-captioned.mp4 to YouTube as Public or Unlisted (2:46; a video of about 2 to 3 minutes is optional).
-4. Replace [LIVE_URL], [REPO_URL] and [YOUTUBE_URL] above.
+4. Replace [YOUTUBE_URL] above.
 5. Upload the eight gallery images in order.
