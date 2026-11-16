@@ -46,16 +46,38 @@ python3 scripts/browser_check.py --shots   # also saves the gallery screenshots 
 python3 scripts/record_demo.py      # records the captioned demo
 ```
 
-## Files
+## Project structure
 
-| File | What it does |
-| --- | --- |
-| `src/signals.js` | The warning signs, with weights, reasons and sources |
-| `src/links.js` | Web address checks |
-| `src/engine.js` | Scoring, scam stories, honest wording, redaction, the trusted person message, call questions |
-| `src/corpus.js`, `src/holdout.js` | The two synthetic message sets |
-| `src/evaluate.js` | Scores a set |
-| `src/app.js` | The interface |
+```text
+scam-pause/
+├── .github/
+│   └── workflows/         # CI workflows (1 file)
+├── docs/                  # Demo video and gallery images (10 files)
+├── scripts/
+│   ├── browser_check.py   # Browser check
+│   ├── record_demo.py     # Records the captioned demo
+│   └── social_preview.py  # Renders the social preview image
+├── src/
+│   ├── theme/             # Shared page theme (3 files)
+│   ├── app.js             # The interface
+│   ├── corpus.js          # Synthetic message set
+│   ├── engine.js          # Scoring, scam stories, redaction, trusted-person message
+│   ├── evaluate.js        # Scores a set
+│   ├── holdout.js         # Held-out synthetic message set
+│   ├── links.js           # Web address checks
+│   ├── signals.js         # The warning signs, with weights, reasons and sources
+│   ├── sources.js         # Source for each warning sign
+│   └── style.css          # Styles
+├── tests/                 # Automated tests
+│   └── engine.test.js
+├── .gitignore
+├── DEVPOST.md             # Submission write-up
+├── index.html             # Page markup
+├── LICENSE                # Licence
+├── package.json           # npm scripts and dependencies
+├── README.md              # This file
+└── VIDEO_SCRIPT.md        # Demo video script
+```
 
 ## Sources
 
